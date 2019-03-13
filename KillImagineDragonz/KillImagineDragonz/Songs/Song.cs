@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace KillImagineDragonz.Song
+namespace KillImagineDragonz.Songs
 {
-    class Song
+    public class Song
     {
         // Define a class called `Song` that has a string property `Artist` and a string property `Name`. 
         // Both properties should be required(invariant) in order to construct an instance of `Song`
