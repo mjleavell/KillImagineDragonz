@@ -1,6 +1,7 @@
 ﻿using KillImagineDragonz.Songs;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace KillImagineDragonz
 {
@@ -32,8 +33,14 @@ namespace KillImagineDragonz
 
             // 4. Once the set is populated with 12 instances of song, use Linq to filter the `allSongs` 
             // list for songs where the artist is **not** Imagine Dragons.Set `goodSongs` equal to the filtered result.
+            GoodSongs = AllSongs.Where(song => song.Artist != "Imagine Dragons").ToList();
 
             // 5. Loop to print out all the good songs like: Elton John : Tiny Dancer
+            foreach (var song in GoodSongs)
+            {
+                Console.WriteLine($"{song.Artist}: {song.Name}");
+            }
+            Console.ReadLine();
         }
     }
 }
